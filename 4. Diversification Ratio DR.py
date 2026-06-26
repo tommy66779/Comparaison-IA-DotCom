@@ -1,21 +1,4 @@
-# =============================================================
-# ÉTAPE 5 — RATIO DE DIVERSIFICATION DE CHOUEIFATY ET COIGNARD
-# =============================================================
-# Le DR mesure la diversification disponible dans un portefeuille.
-#
-# Formule : DR = (Σᵢ wᵢ σᵢ) / σp
-#
-# où wᵢ = 1/n (portefeuille équipondéré)
-#    σᵢ = volatilité annualisée du titre i
-#    σp = volatilité annualisée du portefeuille
-#
-# Le numérateur = ce que serait la volatilité si tous les
-# actifs étaient parfaitement décorrélés.
-# Le dénominateur = la volatilité réelle du portefeuille.
-#
-# DR proche de 1 → peu de diversification (tout est corrélé)
-# DR élevé → bonne diversification (titres indépendants)
-# =============================================================
+#calcul de ratio de diversification (DR)
 
 import pandas as pd
 import numpy as np
