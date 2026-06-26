@@ -73,7 +73,7 @@ def corr_residuelle_carhart(ret, d1, d2): #on calcule la corrélation résiduell
     wml = fac['Mom'].values
     rf  = fac['RF'].values
 
-    # 2, 3 et 4. Régression OLS sur 4 facteurs pour chaque titre
+    
     residus = pd.DataFrame(index=fac.index) #reindex permet de créer une base vide avec les mêmes index que les facteurs, pour stocker les résidus de chaque titre après la régression sur les 4 facteurs.
 
     for col in r_align.columns:
@@ -112,7 +112,7 @@ def corr_residuelle_carhart(ret, d1, d2): #on calcule la corrélation résiduell
         residu_complet[masque] = y_clean - X @ beta
         residus[col] = residu_complet
 
-    # 5. Corrélation moyenne entre les résidus
+   
     corr_res = residus.corr()
     n = corr_res.shape[0]
     masque_diag = ~np.eye(n, dtype=bool)

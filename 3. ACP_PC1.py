@@ -15,13 +15,6 @@ def calcul_pc1(ret, d1, d2): #fonction qui calcule le PC1 sur la matrice de corr
     #Sur la matrice de corrélation, chaque titre a le même poids.
     #On mesure uniquement les co-mouvements.
    
-
-    #Étapes :
-    #1. Filtrer la période
-    #2. Calculer la matrice de corrélation (gestion NaN automatique)
-    #3. Extraire les valeurs propres avec eigvalsh, eigvalsh calcule les valeurs propres d'une matrice symétrique (comme la matrice de corrélation) de manière plus précise et plus rapide que la fonction eig.
-    #4. Trier par ordre décroissant
-    #5. Calculer la part de la première valeur propre
     
     # 1. Filtrer la période
     r = ret.loc[d1:d2]

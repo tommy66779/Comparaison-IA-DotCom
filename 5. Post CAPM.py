@@ -50,7 +50,7 @@ def corr_residuelle_capm(ret, spx, d1, d2):
         residu_complet[masque] = y_clean - (alpha + beta * x_clean)
         residus[col] = residu_complet
 
-    # 4. Corrélation moyenne entre les résidus
+  
     corr_res = residus.corr()
     n = corr_res.shape[0] 
     masque_diag = ~np.eye(n, dtype=bool) #.eye crée une matrice identité (1 sur la diagonale, 0 ailleurs). ~ inverse les valeurs, donc on obtient True pour toutes les positions hors diagonale et False pour la diagonale. Cela permet d'exclure la corrélation d'un titre avec lui-même (qui est toujours 1) lors du calcul de la moyenne.
